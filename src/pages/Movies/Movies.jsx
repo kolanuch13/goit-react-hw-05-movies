@@ -7,12 +7,13 @@ import { ProgressBar } from 'react-loader-spinner';
 import { Section } from "components/styles/Section.styled";
 import { Form } from 'components/styles/Form.styled';
 
-const Movies = ({ moviesOnTrend }) => {
+const Movies = () => {
     const [movies, setMovies] = useState([])
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
     const [params, setParams] = useSearchParams();
     const query = params.get('query');
+    
     useEffect(() => {
         if (query !== null && query.trim() === '') return;
 

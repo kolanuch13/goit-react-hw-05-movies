@@ -42,7 +42,7 @@ const MovieDetails = () => {
     }, [error])
     return (
         <Movie>
-            <Link to={location?.state?.from ?? '/'}></Link>
+            <Link to={location?.state?.from ?? '/'}>⏮</Link>
             {loading && (
                 <ProgressBar
                     height="80"
