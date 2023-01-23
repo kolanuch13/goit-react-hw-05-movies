@@ -15,7 +15,7 @@ const Movies = () => {
     const query = params.get('query');
     
     useEffect(() => {
-        if (query !== null && query.trim() === '') return;
+        if (!query) return;
 
         const fetchMovies = async query => {
             try {
